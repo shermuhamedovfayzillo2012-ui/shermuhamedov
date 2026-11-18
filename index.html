@@ -1,0 +1,1447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FIRE BITE — Hot. Fresh. Unforgettable.</title>
+
+    <meta name="description"
+          content="FIRE BITE — premium burgers, pizza, chicken, fries and drinks. Hot. Fresh. Unforgettable.">
+
+    <meta name="theme-color" content="#ff3b00">
+
+    <meta property="og:title" content="FIRE BITE">
+    <meta property="og:description"
+          content="Hot. Fresh. Unforgettable.">
+    <meta property="og:type" content="website">
+
+    <link rel="icon"
+          href="https://cdn-icons-png.flaticon.com/512/3075/3075977.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ================= LOADER ================= -->
+<div class="page-loader" id="pageLoader">
+    <div class="loader-logo">FIRE<span> BITE</span></div>
+    <div class="loader-spinner"></div>
+</div>
+
+
+<!-- ================= NAVBAR ================= -->
+<header class="navbar" id="navbar">
+
+    <div class="nav-container">
+
+        <a href="#home" class="logo">
+            <span class="logo-fire">FIRE</span>
+            <span class="logo-bite">BITE</span>
+        </a>
+
+        <nav class="nav-links" id="navLinks">
+
+            <a href="#home" class="nav-link active">Home</a>
+            <a href="#menu" class="nav-link">Menu</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#offers" class="nav-link">Offers</a>
+            <a href="#reviews" class="nav-link">Reviews</a>
+            <a href="#contact" class="nav-link">Contact</a>
+
+        </nav>
+
+        <div class="nav-actions">
+
+            <button class="icon-btn" id="searchBtn" aria-label="Search">
+                🔍
+            </button>
+
+            <button class="icon-btn cart-btn" id="cartBtn" aria-label="Shopping cart">
+                🛒
+                <span class="cart-count" id="cartCount">0</span>
+            </button>
+
+            <button class="icon-btn" id="themeToggle" aria-label="Toggle theme">
+                🌙
+            </button>
+
+            <a href="#menu" class="order-btn nav-order-btn">
+                Order Now
+            </a>
+
+            <button class="hamburger" id="hamburger" aria-label="Open menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- ================= SEARCH PANEL ================= -->
+<div class="search-panel" id="searchPanel">
+
+    <div class="search-container">
+
+        <input
+            type="search"
+            id="searchInput"
+            placeholder="Search burgers, pizza, chicken..."
+            autocomplete="off"
+        >
+
+        <button id="closeSearch" class="close-btn">
+            ✕
+        </button>
+
+    </div>
+
+    <div class="search-results" id="searchResults"></div>
+
+</div>
+
+
+<main>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="home">
+
+    <div class="hero-container">
+
+        <div class="hero-content">
+
+            <span class="hero-small-title">
+                🔥 WELCOME TO FIRE BITE
+            </span>
+
+            <h1>
+                THE ULTIMATE
+                <span>FAST FOOD</span>
+                EXPERIENCE
+            </h1>
+
+            <p>
+                Delicious food made with fresh ingredients,
+                bold flavors and a little bit of fire.
+                Hot. Fresh. Unforgettable.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#menu" class="btn btn-primary">
+                    ORDER NOW
+                    <span>→</span>
+                </a>
+
+                <a href="#menu" class="btn btn-outline">
+                    EXPLORE MENU
+                </a>
+
+            </div>
+
+            <div class="hero-stats">
+
+                <div class="hero-stat">
+                    <strong>10K+</strong>
+                    <span>Happy Customers</span>
+                </div>
+
+                <div class="hero-stat">
+                    <strong>25</strong>
+                    <span>Min Delivery</span>
+                </div>
+
+                <div class="hero-stat">
+                    <strong>4.9</strong>
+                    <span>Rating</span>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="hero-image-wrapper">
+
+            <div class="hero-circle"></div>
+
+            <img
+                class="hero-image"
+                src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=1000&q=90"
+                alt="Delicious FIRE BITE burger"
+            >
+
+            <div class="floating-card card-rating">
+                <span>⭐</span>
+                <div>
+                    <strong>4.9/5</strong>
+                    <small>Excellent</small>
+                </div>
+            </div>
+
+            <div class="floating-card card-delivery">
+                <span>🚴</span>
+                <div>
+                    <strong>25 min</strong>
+                    <small>Fast Delivery</small>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CATEGORIES ================= -->
+<section class="categories-section">
+
+    <div class="container">
+
+        <div class="section-heading center">
+
+            <span class="section-label">WHAT DO YOU WANT?</span>
+
+            <h2>
+                CHOOSE YOUR
+                <span>FAVORITE</span>
+            </h2>
+
+        </div>
+
+        <div class="categories">
+
+            <button class="category-card active" data-category="all">
+                <div class="category-icon">🍽️</div>
+                <span>All</span>
+            </button>
+
+            <button class="category-card" data-category="burgers">
+                <div class="category-icon">🍔</div>
+                <span>Burgers</span>
+            </button>
+
+            <button class="category-card" data-category="pizza">
+                <div class="category-icon">🍕</div>
+                <span>Pizza</span>
+            </button>
+
+            <button class="category-card" data-category="chicken">
+                <div class="category-icon">🍗</div>
+                <span>Chicken</span>
+            </button>
+
+            <button class="category-card" data-category="fries">
+                <div class="category-icon">🍟</div>
+                <span>Fries</span>
+            </button>
+
+            <button class="category-card" data-category="drinks">
+                <div class="category-icon">🥤</div>
+                <span>Drinks</span>
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= MENU ================= -->
+<section class="menu-section" id="menu">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <div>
+                <span class="section-label">OUR MENU</span>
+
+                <h2>
+                    MOST
+                    <span>POPULAR</span>
+                </h2>
+            </div>
+
+            <div class="menu-filters">
+
+                <button class="filter-btn active" data-filter="all">
+                    ALL
+                </button>
+
+                <button class="filter-btn" data-filter="burgers">
+                    BURGERS
+                </button>
+
+                <button class="filter-btn" data-filter="pizza">
+                    PIZZA
+                </button>
+
+                <button class="filter-btn" data-filter="chicken">
+                    CHICKEN
+                </button>
+
+                <button class="filter-btn" data-filter="fries">
+                    FRIES
+                </button>
+
+                <button class="filter-btn" data-filter="drinks">
+                    DRINKS
+                </button>
+
+            </div>
+
+        </div>
+
+        <div class="products-grid" id="productsGrid">
+
+            <!-- FIRE BURGER -->
+            <article
+                class="product-card"
+                data-id="1"
+                data-category="burgers"
+                data-name="Fire Burger"
+                data-price="8.99"
+            >
+
+                <div class="product-image">
+
+                    <span class="product-badge">POPULAR</span>
+
+                    <button
+                        class="favorite-btn"
+                        data-id="1"
+                        aria-label="Add to favorites"
+                    >
+                        ♡
+                    </button>
+
+                    <img
+                        src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=800&q=85"
+                        alt="Fire Burger"
+                        loading="lazy"
+                    >
+
+                </div>
+
+                <div class="product-info">
+
+                    <div class="product-rating">
+                        ⭐ 4.9
+                    </div>
+
+                    <h3>Fire Burger</h3>
+
+                    <p>
+                        Double beef, cheddar cheese,
+                        crispy onions and fire sauce.
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <strong class="price">
+                            $8.99
+                        </strong>
+
+                        <button class="add-cart-btn" data-id="1">
+                            + Add
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- DOUBLE BEEF -->
+            <article
+                class="product-card"
+                data-id="2"
+                data-category="burgers"
+                data-name="Double Beef Burger"
+                data-price="11.99"
+            >
+
+                <div class="product-image">
+
+                    <button
+                        class="favorite-btn"
+                        data-id="2"
+                        aria-label="Add to favorites"
+                    >
+                        ♡
+                    </button>
+
+                    <img
+                        src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=800&q=85"
+                        alt="Double Beef Burger"
+                        loading="lazy"
+                    >
+
+                </div>
+
+                <div class="product-info">
+
+                    <div class="product-rating">
+                        ⭐ 4.8
+                    </div>
+
+                    <h3>Double Beef Burger</h3>
+
+                    <p>
+                        Two juicy beef patties,
+                        cheese and special sauce.
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <strong class="price">$11.99</strong>
+
+                        <button class="add-cart-btn" data-id="2">
+                            + Add
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- CRISPY CHICKEN -->
+            <article
+                class="product-card"
+                data-id="3"
+                data-category="chicken"
+                data-name="Crispy Chicken"
+                data-price="9.49"
+            >
+
+                <div class="product-image">
+
+                    <span class="product-badge">HOT</span>
+
+                    <button
+                        class="favorite-btn"
+                        data-id="3"
+                        aria-label="Add to favorites"
+                    >
+                        ♡
+                    </button>
+
+                    <img
+                        src="https://images.unsplash.com/photo-1562967916-eb82221dfb92?auto=format&fit=crop&w=800&q=85"
+                        alt="Crispy Chicken"
+                        loading="lazy"
+                    >
+
+                </div>
+
+                <div class="product-info">
+
+                    <div class="product-rating">
+                        ⭐ 4.9
+                    </div>
+
+                    <h3>Crispy Chicken</h3>
+
+                    <p>
+                        Crispy chicken fillet,
+                        fresh lettuce and spicy sauce.
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <strong class="price">$9.49</strong>
+
+                        <button class="add-cart-btn" data-id="3">
+                            + Add
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- LOADED FRIES -->
+            <article
+                class="product-card"
+                data-id="4"
+                data-category="fries"
+                data-name="Loaded Fries"
+                data-price="5.49"
+            >
+
+                <div class="product-image">
+
+                    <button
+                        class="favorite-btn"
+                        data-id="4"
+                        aria-label="Add to favorites"
+                    >
+                        ♡
+                    </button>
+
+                    <img
+                        src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=800&q=85"
+                        alt="Loaded Fries"
+                        loading="lazy"
+                    >
+
+                </div>
+
+                <div class="product-info">
+
+                    <div class="product-rating">
+                        ⭐ 4.7
+                    </div>
+
+                    <h3>Loaded Fries</h3>
+
+                    <p>
+                        Golden fries with cheese,
+                        crispy beef and special sauce.
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <strong class="price">$5.49</strong>
+
+                        <button class="add-cart-btn" data-id="4">
+                            + Add
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- CHEESE BURGER -->
+            <article
+                class="product-card"
+                data-id="5"
+                data-category="burgers"
+                data-name="Cheese Burger"
+                data-price="7.99"
+            >
+
+                <div class="product-image">
+
+                    <button
+                        class="favorite-btn"
+                        data-id="5"
+                        aria-label="Add to favorites"
+                    >
+                        ♡
+                    </button>
+
+                    <img
+                        src="https://images.unsplash.com/photo-1561758033-d89a9ad46330?auto=format&fit=crop&w=800&q=85"
+                        alt="Cheese Burger"
+                        loading="lazy"
+                    >
+
+                </div>
+
+                <div class="product-info">
+
+                    <div class="product-rating">
+                        ⭐ 4.8
+                    </div>
+
+                    <h3>Cheese Burger</h3>
+
+                    <p>
+                        Classic beef burger with
+                        melted cheddar cheese.
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <strong class="price">$7.99</strong>
+
+                        <button class="add-cart-btn" data-id="5">
+                            + Add
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- SPICY WINGS -->
+            <article
+                class="product-card"
+                data-id="6"
+                data-category="chicken"
+                data-name="Spicy Wings"
+                data-price="8.49"
+            >
+
+                <div class="product-image">
+
+                    <span class="product-badge">SPICY</span>
+
+                    <button
+                        class="favorite-btn"
+                        data-id="6"
+                        aria-label="Add to favorites"
+                    >
+                        ♡
+                    </button>
+
+                    <img
+                        src="https://images.unsplash.com/photo-1527477396000-e27163b481c2?auto=format&fit=crop&w=800&q=85"
+                        alt="Spicy Wings"
+                        loading="lazy"
+                    >
+
+                </div>
+
+                <div class="product-info">
+
+                    <div class="product-rating">
+                        ⭐ 4.9
+                    </div>
+
+                    <h3>Spicy Wings</h3>
+
+                    <p>
+                        Crispy chicken wings
+                        with hot spicy glaze.
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <strong class="price">$8.49</strong>
+
+                        <button class="add-cart-btn" data-id="6">
+                            + Add
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- CLASSIC PIZZA -->
+            <article
+                class="product-card"
+                data-id="7"
+                data-category="pizza"
+                data-name="Classic Pizza"
+                data-price="10.99"
+            >
+
+                <div class="product-image">
+
+                    <button
+                        class="favorite-btn"
+                        data-id="7"
+                        aria-label="Add to favorites"
+                    >
+                        ♡
+                    </button>
+
+                    <img
+                        src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=800&q=85"
+                        alt="Classic Pizza"
+                        loading="lazy"
+                    >
+
+                </div>
+
+                <div class="product-info">
+
+                    <div class="product-rating">
+                        ⭐ 4.8
+                    </div>
+
+                    <h3>Classic Pizza</h3>
+
+                    <p>
+                        Fresh mozzarella, tomato,
+                        herbs and crispy crust.
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <strong class="price">$10.99</strong>
+
+                        <button class="add-cart-btn" data-id="7">
+                            + Add
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- FRESH COLA -->
+            <article
+                class="product-card"
+                data-id="8"
+                data-category="drinks"
+                data-name="Fresh Cola"
+                data-price="2.49"
+            >
+
+                <div class="product-image">
+
+                    <button
+                        class="favorite-btn"
+                        data-id="8"
+                        aria-label="Add to favorites"
+                    >
+                        ♡
+                    </button>
+
+                    <img
+                        src="https://images.unsplash.com/photo-1581636625402-29b2a704ef13?auto=format&fit=crop&w=800&q=85"
+                        alt="Fresh Cola"
+                        loading="lazy"
+                    >
+
+                </div>
+
+                <div class="product-info">
+
+                    <div class="product-rating">
+                        ⭐ 4.6
+                    </div>
+
+                    <h3>Fresh Cola</h3>
+
+                    <p>
+                        Ice-cold refreshing cola
+                        with fresh ice.
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <strong class="price">$2.49</strong>
+
+                        <button class="add-cart-btn" data-id="8">
+                            + Add
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+        </div>
+
+        <div class="empty-products" id="emptyProducts">
+            <div>🔎</div>
+            <h3>No products found</h3>
+            <p>Try another search or category.</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= OFFER ================= -->
+<section class="offer-section" id="offers">
+
+    <div class="container">
+
+        <div class="offer-box">
+
+            <div class="offer-content">
+
+                <span class="section-label">
+                    🔥 LIMITED OFFER
+                </span>
+
+                <h2>
+                    GET <span>20% OFF</span>
+                    YOUR FIRST ORDER
+                </h2>
+
+                <p>
+                    Use promo code
+                    <strong>FIRE20</strong>
+                    at checkout.
+                </p>
+
+                <button class="btn btn-primary" id="claimOffer">
+                    CLAIM OFFER
+                </button>
+
+            </div>
+
+            <div class="offer-decoration">
+                🔥
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+<section class="about-section" id="about">
+
+    <div class="container">
+
+        <div class="about-grid">
+
+            <div class="about-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=1000&q=85"
+                    alt="FIRE BITE restaurant"
+                    loading="lazy"
+                >
+
+                <div class="about-experience">
+                    <strong>10+</strong>
+                    <span>Years<br>Experience</span>
+                </div>
+
+            </div>
+
+            <div class="about-content">
+
+                <span class="section-label">
+                    ABOUT FIRE BITE
+                </span>
+
+                <h2>
+                    MORE THAN JUST
+                    <span>FAST FOOD</span>
+                </h2>
+
+                <p>
+                    At FIRE BITE, we believe fast food should never
+                    mean boring food. We use fresh ingredients,
+                    bold recipes and quality products to create
+                    unforgettable meals.
+                </p>
+
+                <div class="features">
+
+                    <div class="feature">
+                        <div class="feature-icon">🥬</div>
+                        <div>
+                            <h3>Fresh Ingredients</h3>
+                            <p>Fresh products every day.</p>
+                        </div>
+                    </div>
+
+                    <div class="feature">
+                        <div class="feature-icon">🚀</div>
+                        <div>
+                            <h3>Fast Delivery</h3>
+                            <p>Hot food at your door.</p>
+                        </div>
+                    </div>
+
+                    <div class="feature">
+                        <div class="feature-icon">⭐</div>
+                        <div>
+                            <h3>Best Quality</h3>
+                            <p>Quality is our priority.</p>
+                        </div>
+                    </div>
+
+                    <div class="feature">
+                        <div class="feature-icon">❤️</div>
+                        <div>
+                            <h3>Made With Love</h3>
+                            <p>Every meal made with care.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= STATS ================= -->
+<section class="stats-section">
+
+    <div class="container">
+
+        <div class="stats-grid">
+
+            <div class="stat-item">
+                <strong>10K+</strong>
+                <span>Happy Customers</span>
+            </div>
+
+            <div class="stat-item">
+                <strong>25 MIN</strong>
+                <span>Average Delivery</span>
+            </div>
+
+            <div class="stat-item">
+                <strong>100%</strong>
+                <span>Fresh Ingredients</span>
+            </div>
+
+            <div class="stat-item">
+                <strong>4.9</strong>
+                <span>Customer Rating</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= REVIEWS ================= -->
+<section class="reviews-section" id="reviews">
+
+    <div class="container">
+
+        <div class="section-heading center">
+
+            <span class="section-label">
+                CUSTOMER REVIEWS
+            </span>
+
+            <h2>
+                WHAT PEOPLE
+                <span>SAY</span>
+            </h2>
+
+        </div>
+
+        <div class="reviews-grid">
+
+            <article class="review-card">
+
+                <div class="review-top">
+
+                    <div class="avatar">A</div>
+
+                    <div>
+                        <h3>Alex Johnson</h3>
+                        <div class="stars">★★★★★</div>
+                    </div>
+
+                </div>
+
+                <p>
+                    “The Fire Burger was absolutely amazing!
+                    Super fresh and delivered really fast.”
+                </p>
+
+            </article>
+
+
+            <article class="review-card">
+
+                <div class="review-top">
+
+                    <div class="avatar">S</div>
+
+                    <div>
+                        <h3>Sarah Williams</h3>
+                        <div class="stars">★★★★★</div>
+                    </div>
+
+                </div>
+
+                <p>
+                    “The loaded fries are incredible.
+                    FIRE BITE is now one of my favorite places.”
+                </p>
+
+            </article>
+
+
+            <article class="review-card">
+
+                <div class="review-top">
+
+                    <div class="avatar">M</div>
+
+                    <div>
+                        <h3>Michael Brown</h3>
+                        <div class="stars">★★★★★</div>
+                    </div>
+
+                </div>
+
+                <p>
+                    “Great food, great prices and very fast
+                    delivery. Definitely recommend!”
+                </p>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+<section class="contact-section" id="contact">
+
+    <div class="container">
+
+        <div class="contact-grid">
+
+            <div class="contact-info">
+
+                <span class="section-label">
+                    GET IN TOUCH
+                </span>
+
+                <h2>
+                    CONTACT
+                    <span>US</span>
+                </h2>
+
+                <p>
+                    Have a question or want to place a special
+                    order? Send us a message.
+                </p>
+
+                <div class="contact-details">
+
+                    <div class="contact-item">
+                        <span>📍</span>
+                        <div>
+                            <strong>Address</strong>
+                            <p>123 Fire Street, Tashkent</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <span>📞</span>
+                        <div>
+                            <strong>Phone</strong>
+                            <p>+998 90 123 45 67</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <span>✉️</span>
+                        <div>
+                            <strong>Email</strong>
+                            <p>hello@firebite.com</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <span>🕐</span>
+                        <div>
+                            <strong>Opening Hours</strong>
+                            <p>10:00 — 23:00 Every Day</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <form class="contact-form" id="contactForm">
+
+                <div class="form-group">
+
+                    <label for="name">Name</label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Your name"
+                        required
+                    >
+
+                </div>
+
+                <div class="form-group">
+
+                    <label for="email">Email</label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Your email"
+                        required
+                    >
+
+                </div>
+
+                <div class="form-group">
+
+                    <label for="message">Message</label>
+
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="6"
+                        placeholder="Your message..."
+                        required
+                    ></textarea>
+
+                </div>
+
+                <button type="submit" class="btn btn-primary">
+                    SEND MESSAGE
+                    <span>→</span>
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<!-- ================= CART DRAWER ================= -->
+<div class="cart-overlay" id="cartOverlay"></div>
+
+<aside class="cart-drawer" id="cartDrawer">
+
+    <div class="cart-header">
+
+        <div>
+            <span class="section-label">YOUR ORDER</span>
+            <h2>SHOPPING CART</h2>
+        </div>
+
+        <button class="close-cart" id="closeCart">
+            ✕
+        </button>
+
+    </div>
+
+
+    <div class="cart-items" id="cartItems">
+
+        <div class="empty-cart" id="emptyCart">
+
+            <div class="empty-cart-icon">
+                🛒
+            </div>
+
+            <h3>Your cart is empty</h3>
+
+            <p>
+                Add something delicious from our menu.
+            </p>
+
+            <button class="btn btn-primary" id="startShopping">
+                START SHOPPING
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <div class="cart-footer">
+
+        <div class="cart-summary">
+
+            <div>
+                <span>Subtotal</span>
+                <strong id="cartSubtotal">$0.00</strong>
+            </div>
+
+            <div>
+                <span>Delivery</span>
+                <strong id="cartDelivery">$0.00</strong>
+            </div>
+
+            <div class="discount-row" id="discountRow">
+
+                <span>Discount</span>
+
+                <strong id="cartDiscount">
+                    -$0.00
+                </strong>
+
+            </div>
+
+            <div class="cart-total">
+
+                <span>Total</span>
+
+                <strong id="cartTotal">
+                    $0.00
+                </strong>
+
+            </div>
+
+        </div>
+
+        <button
+            class="checkout-btn"
+            id="checkoutBtn"
+            disabled
+        >
+            PLACE ORDER
+            <span>→</span>
+        </button>
+
+    </div>
+
+</aside>
+
+
+<!-- ================= PRODUCT MODAL ================= -->
+<div class="modal-overlay" id="productModal">
+
+    <div class="product-modal">
+
+        <button class="modal-close" id="closeProductModal">
+            ✕
+        </button>
+
+        <div class="modal-image">
+
+            <img
+                id="modalProductImage"
+                src=""
+                alt="Product"
+            >
+
+        </div>
+
+        <div class="modal-content">
+
+            <span class="modal-category" id="modalProductCategory">
+                BURGER
+            </span>
+
+            <h2 id="modalProductName">
+                Product Name
+            </h2>
+
+            <div class="modal-rating">
+                ⭐ <span id="modalProductRating">4.9</span>
+            </div>
+
+            <p id="modalProductDescription">
+                Delicious product description.
+            </p>
+
+            <div class="ingredients">
+
+                <h4>Ingredients</h4>
+
+                <div id="modalIngredients">
+                    Fresh ingredients, special sauce,
+                    cheese and premium products.
+                </div>
+
+            </div>
+
+            <div class="modal-bottom">
+
+                <strong id="modalProductPrice">
+                    $0.00
+                </strong>
+
+                <div class="quantity-control">
+
+                    <button id="modalMinus">−</button>
+
+                    <span id="modalQuantity">1</span>
+
+                    <button id="modalPlus">+</button>
+
+                </div>
+
+                <button
+                    class="btn btn-primary"
+                    id="modalAddCart"
+                >
+                    ADD TO CART
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ================= TOAST ================= -->
+<div class="toast" id="toast">
+
+    <span class="toast-icon">✓</span>
+
+    <div>
+        <strong id="toastTitle">
+            Success
+        </strong>
+
+        <p id="toastMessage">
+            Added to cart successfully!
+        </p>
+    </div>
+
+</div>
+
+
+<!-- ================= SCROLL TOP ================= -->
+<button
+    class="scroll-top"
+    id="scrollTop"
+    aria-label="Scroll to top"
+>
+    ↑
+</button>
+
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+
+    <div class="container">
+
+        <div class="footer-grid">
+
+            <div class="footer-brand">
+
+                <a href="#home" class="logo">
+                    <span class="logo-fire">FIRE</span>
+                    <span class="logo-bite">BITE</span>
+                </a>
+
+                <p>
+                    Hot. Fresh. Unforgettable.
+                    Premium fast food made with love.
+                </p>
+
+                <div class="social-links">
+
+                    <a href="#" aria-label="Instagram">
+                        Instagram
+                    </a>
+
+                    <a href="#" aria-label="Facebook">
+                        Facebook
+                    </a>
+
+                    <a href="#" aria-label="TikTok">
+                        TikTok
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>Quick Links</h3>
+
+                <a href="#home">Home</a>
+                <a href="#menu">Menu</a>
+                <a href="#about">About</a>
+                <a href="#offers">Offers</a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>Menu</h3>
+
+                <a href="#menu">Burgers</a>
+                <a href="#menu">Pizza</a>
+                <a href="#menu">Chicken</a>
+                <a href="#menu">Drinks</a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>Contact</h3>
+
+                <a href="tel:+998901234567">
+                    +998 90 123 45 67
+                </a>
+
+                <a href="mailto:hello@firebite.com">
+                    hello@firebite.com
+                </a>
+
+                <span>
+                    Tashkent, Uzbekistan
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 FIRE BITE. All rights reserved.
+            </p>
+
+            <p>
+                Hot. Fresh. Unforgettable. 🔥
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- ================= SCRIPTS ================= -->
+<script src="script.js"></script>
+
+</body>
+</html>
